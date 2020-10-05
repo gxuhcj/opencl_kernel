@@ -1,5 +1,4 @@
-#include "CL/cl.h"
-#include "arm_single_gpu_info_init.h"
+#include "param.h"
 #include<iostream>
 
 using namespace std;

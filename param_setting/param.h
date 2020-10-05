@@ -1,5 +1,7 @@
 #ifndef _PARAM_H_
 #define _PARAM_H_
+#include "CL/cl.h"
+#include "arm_single_gpu_info_init.h"
 
 cl_platform_id get_platform();
 

@@ -1,5 +1,6 @@
 #ifndef _ARM_SINGLE_GPU_INFO_INIT_H_
 #define _ARM_SINGLE_GPU_INFO_INIT_H_
+#include "CL/cl.h"
 
 class ASGInfo{
     private:
