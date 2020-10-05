@@ -19,7 +19,7 @@ cl_context get_context(){
 }
 
 cl_command_queue get_command_queue(){
-    return info.
+    return info.get_command_queue();
 }
 
 
