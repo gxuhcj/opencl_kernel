@@ -3,7 +3,7 @@
 #include "CL/cl.h"
 
 class Info{
-    private:
+//    private:
         // cl_platform_id platform;
         // cl_device_id  device;
         // cl_context  context;
@@ -20,19 +20,19 @@ class Info{
     
     public:
 
-        virtual cl_platform_id get_platform();
-        virtual cl_device_id get_device();
-        virtual cl_context get_context();
-        virtual cl_command_queue get_command_queue();
+        virtual cl_platform_id get_platform()=0;
+        virtual cl_device_id get_device()=0;
+        virtual cl_context get_context()=0;
+        virtual cl_command_queue get_command_queue()=0;
 
-        virtual char * get_platform_name();
-        virtual char * get_platform_vendor();
-        virtual char * get_platform_version();
-        virtual char * get_platform_profile();
+        virtual char * get_platform_name()=0;
+        virtual char * get_platform_vendor()=0;
+        virtual char * get_platform_version()=0;
+        virtual char * get_platform_profile()=0;
 
-        virtual char * get_device_name();
-        virtual char * get_deice_vendor();
-        virtual long get_device_mem_size();
+        virtual char * get_device_name()=0;
+        virtual char * get_deice_vendor()=0;
+        virtual long get_device_mem_size()=0;
 
 };
 
