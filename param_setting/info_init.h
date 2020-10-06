@@ -4,19 +4,19 @@
 
 class Info{
     private:
-        cl_platform_id platform;
-        cl_device_id  device;
-        cl_context  context;
-        cl_command_queue commandQueue;
+        // cl_platform_id platform;
+        // cl_device_id  device;
+        // cl_context  context;
+        // cl_command_queue commandQueue;
 
-        char platform_name[40];
-        char platform_vendor[40];
-        char platform_version[40];
-        char platform_profile[40];
+        // char platform_name[40];
+        // char platform_vendor[40];
+        // char platform_version[40];
+        // char platform_profile[40];
 
-        char device_name[40];
-        char device_vendor[40];
-        long device_mem_size;
+        // char device_name[40];
+        // char device_vendor[40];
+        // long device_mem_size;
     
     public:
 
