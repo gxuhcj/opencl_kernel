@@ -4,27 +4,56 @@
 #include "arm_single_gpu_info_init.h"
 #include "info_init.h"
 
-cl_platform_id get_platform();
 
-cl_device_id get_device();
+template<class T>
+class Param {
+public:
 
-cl_context get_context();
+    T info;
 
-cl_command_queue get_command_queue();
+    cl_platform_id get_platform(){
+        return info.get_platform();
+    }
+
+    cl_device_id get_device(){
+        return info.get_device();
+    }
+
+    cl_context get_context(){
+        return info.get_context();
+    }
+
+    cl_command_queue get_command_queue(){
+        return info.get_command_queue();
+    }
 
 
-char * get_platform_name();
+    char * get_platform_name(){
+        return info.get_platform_name();
+    }
 
-char * get_platform_vendor();
+    char * get_platform_vendor(){
+        return info.get_platform_vendor();
+    }
 
-char * get_platform_version();
+    char * get_platform_version(){
+        return info.get_platform_version();
+    }
 
-char * get_platform_profile();
+    char * get_platform_profile(){
+        return info.get_platform_profile();
+    }
 
-char * get_device_name();
+    char * get_device_name(){
+        return info.get_device_name();
+    }
 
-char * get_deice_vendor();
+    char * get_deice_vendor(){
+        return info.get_deice_vendor();
+    }
 
-long get_device_mem_size();
-
+    long get_device_mem_size(){
+        return info.get_device_mem_size();
+    }
+};
 #endif 

@@ -9,6 +9,7 @@ class ASGInfo:public Info{
         cl_device_id  device;
         cl_context  context;
         cl_command_queue commandQueue;
+        
 
         char platform_name[40];
         char platform_vendor[40];
