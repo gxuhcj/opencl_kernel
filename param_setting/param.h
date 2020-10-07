@@ -27,6 +27,28 @@ public:
         return info.get_command_queue();
     }
 
+    cl_program get_program(char *code_file){
+        cl_program program;
+        try{
+            FILE *program_handle = fopen(code_file, "r");
+            fseek(program_handle, 0, SEEK_END);
+            int program_size = ftell(program_handle);
+            rewind(program_handle);
+            char *program_buffer = (char*)malloc(program_size+1);
+            program_buffer[program_size] = '\0';
+            fread(program_buffer, sizeof(char), program_size, program_handle);
+            fclose(program_handle);
+            size_t sourceSize[] = { strlen(program_buffer) };
+            const char *program_buffer_f = program_buffer;
+            program = clCreateProgramWithSource(context, 1, &program_buffer_f, sourceSize, NULL);
+            status = clBuildProgram(program, 1, &device, NULL, NULL, NULL);
+        }
+        catch(exception e){
+            return NULL;
+        }
+        return program;
+    }
+
 
     char * get_platform_name(){
         return info.get_platform_name();
